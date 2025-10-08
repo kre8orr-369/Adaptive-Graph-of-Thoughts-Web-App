@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptive Graph of Thoughts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧠 Adaptive Graph of Thoughts</h1>
+            <p class="subtitle">Explore complex ideas through adaptive AI-powered thought branching</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <div class="form-group">
+                    <label for="prompt">Enter your initial question or prompt:</label>
+                    <textarea 
+                        id="prompt" 
+                        rows="4" 
+                        placeholder="e.g., What are the implications of artificial intelligence on society?"
+                    ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="maxDepth">Maximum exploration depth:</label>
+                    <select id="maxDepth">
+                        <option value="1">1 - Quick exploration</option>
+                        <option value="2">2 - Moderate exploration</option>
+                        <option value="3" selected>3 - Deep exploration</option>
+                        <option value="4">4 - Very deep exploration</option>
+                    </select>
+                </div>
+
+                <button id="processBtn" class="btn-primary">
+                    Generate Thought Graph
+                </button>
+            </section>
+
+            <section class="status-section" id="statusSection" style="display: none;">
+                <div class="status-message" id="statusMessage"></div>
+            </section>
+
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <h2>Thought Graph Visualization</h2>
+                <div id="graphStats" class="graph-stats"></div>
+                <div id="graphContainer" class="graph-container"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
